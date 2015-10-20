@@ -61,7 +61,7 @@ namespace Bini_Project.Controllers
                             userModel = await response.Content.ReadAsAsync<User>();
                             userModel.userName = _lvUserName;
                             FormsAuthentication.SetAuthCookie(_lvUserName, false);
-                            Session.Add(userModel.userName, userModel.token);
+                            Session.Add("user", userModel.token);
 
 
                             return RedirectToAction("Index", "Patients");                          

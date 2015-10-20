@@ -35,7 +35,7 @@ namespace Bini_Project.Controllers
                 search.lastname = ps.lastname;
                 search.patientID = ps.patientID;
 
-                search.token = Session.Contents["user1"].ToString();
+                search.token = Session.Contents["user"].ToString();
 
                 using (HttpClient httpClient = new HttpClient())
                 {
